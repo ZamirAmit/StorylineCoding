@@ -18,13 +18,13 @@ function loadSCRIPT(src) {
     document.getElementsByTagName('head')[0].appendChild(script);
 
 }
-/* Test your function:
+/* Test your function: */
 // var player = GetPlayer();
 // var src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"; //player.GetVar("src");
 // loadSCRIPT(src);
 
 ```
-
+This is an example file: [LoadScript.story](https://unity.com/shader-graph)
 ![](Packages/com.alelievr.mixture/Documentation~/Images/Mixture-github.png)
 
 [![Discord](https://img.shields.io/discord/823720615965622323.svg?style=for-the-badge)](https://discord.gg/DGxZRP3qeg)
