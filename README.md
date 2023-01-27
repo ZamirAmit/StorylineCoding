@@ -24,8 +24,7 @@ function loadSCRIPT(src) {
 // loadSCRIPT(src);
 
 ```
-This is an example file: [LoadScript.story](https://unity.com/shader-graph)
-![](Packages/com.alelievr.mixture/Documentation~/Images/Mixture-github.png)
+This is an example file: [LoadScript.story](LoadScript.story)
 
 [![Discord](https://img.shields.io/discord/823720615965622323.svg?style=for-the-badge)](https://discord.gg/DGxZRP3qeg)
 [![openupm](https://img.shields.io/npm/v/com.alelievr.mixture?label=openupm&registry_uri=https://package.openupm.com&style=for-the-badge)](https://openupm.com/packages/com.alelievr.mixture/)
