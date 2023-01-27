@@ -1,9 +1,28 @@
 # StorylineCoding
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+## How to load JS file programmincally:
+
+```javascript
+
+function loadSCRIPT(src) {
+
+    var arr = src.split('/');
+    var last_item = arr.length - 1;
+    var file_name = arr[last_item];
+    var script = document.createElement('script');
+    script.onload = function () {
+        console.log("Script: " + file_name + " loaded and ready");
+        player.SetVar("JQUERY", true);
+    };
+    script.src = src;
+    document.getElementsByTagName('head')[0].appendChild(script);
+
+}
+/* Test your function:
+// var player = GetPlayer();
+// var src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"; //player.GetVar("src");
+// loadSCRIPT(src);
+
 ```
 
 ![](Packages/com.alelievr.mixture/Documentation~/Images/Mixture-github.png)
