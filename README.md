@@ -1,7 +1,7 @@
 # StorylineCoding
 
 ## How to comunicate with player scope variables:
-
+Javascript can manipulate Storyline variables very easily. you just need to create a trigger and run simple code:
 ```javascript
 // Calling the Player:
 var player = GetPlayer();
