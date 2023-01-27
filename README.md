@@ -41,7 +41,74 @@ function loadSCRIPT(src) {
 
 This is an example file: [LoadScript.story](LoadScript.story)
 
+## How to create a Timer using JS:
+Javascript can create a Timer feature using the Interval method.
+You can learn about it on w3schools webiste in [here](https://www.w3schools.com/jsref/met_win_setinterval.asp).
+Here is a simple code for creating timer using JS:
+### procedure:
+1. Create a timer text vaiable inside storyline
+2. Set it to your time limit like this "09:35" (for example)
+3. Create an Execute JS trigger
+4. Paste this code inside:
+```javascript
 
+// This function activates the Interavl method:
+function initTimer() {
+    if (window.SetTimer) {
+        clearInterval(window.SetTimer);
+        window.SetTimer = null;
+    }
+    var timer = player.GetVar("timer");
+    ActivateTimer(timer);
+}
+
+// This function runs inside the Interval method.
+// The function Gets Storyline timer variable and converting it into working timer:
+
+function ActivateTimer(timer) {
+    minutes_durration = timer.split(":")[0];
+    seconds_durration = timer.split(":")[1];
+    var distance = minutes_durration * 60 + parseInt(seconds_durration);
+
+    if (!isNaN(distance)) {
+        {
+            window.SetTimer = setInterval(function() {
+
+                // Time calculations for days, hours, minutes and seconds
+                var remain_minutes = Math.floor(distance / 60);
+                var remain_seconds = Math.floor(distance - remain_minutes * 60);
+                remain_seconds = remain_seconds.toString().padStart(2, "0");
+                remain_minutes = remain_minutes.toString().padStart(2, "0");
+
+                // Output the result in an element with id="demo"
+                remain_time = remain_minutes + ":" + remain_seconds;
+                player.SetVar("timer", remain_time);
+                distance--;
+                // If the count down is over, write some text 
+                if (distance < 0) {
+
+                    player.SetVar("timer", "");
+                    clearInterval(window.SetTimer);
+                    window.SetTimer = false;
+                    //console.log(timer);
+
+                }
+                if (player.GetVar("time_to_stop")) {
+                    clearInterval(window.SetTimer);
+                    window.SetTimer = false;
+                }
+
+
+            }, 1000);
+
+        }
+    }
+}
+
+// Test youe code:
+var player = GetPlayer();
+initTimer();
+```
 
 [![Discord](https://img.shields.io/discord/823720615965622323.svg?style=for-the-badge)](https://discord.gg/DGxZRP3qeg)
 [![openupm](https://img.shields.io/npm/v/com.alelievr.mixture?label=openupm&registry_uri=https://package.openupm.com&style=for-the-badge)](https://openupm.com/packages/com.alelievr.mixture/)
