@@ -28,7 +28,8 @@ function SetProgressBar() {
         }
         progress_exam = buttons.filter(x => x == "Completed").length;
         player.SetVar("progress_exam", progress_exam);
-
+        progress_message = progress_exam + " שאלות הושלמו מתוך 25"
+        player.SetVar("progress_message", progress_message);
         //return buttons
 
 
@@ -442,12 +443,12 @@ function SetLatencyOn() {
 }
 
 
-function SetAns1AsLearnerResponse() {
+function SetAnsAsLearnerResponse(ans_number) {
     // Set learner_response id ans1 was chosen:
     var player = GetPlayer();
     exam_obj_shfl = JSON.parse(player.GetVar("exam_obj_shfl"));
     var question_id = player.GetVar("question_id");
-    learner_reponse = exam_obj_shfl.data[question_id].ans1;
+    learner_reponse = exam_obj_shfl.data[question_id][ans_number];
     player.SetVar("learner_response", learner_reponse);
 }
 
