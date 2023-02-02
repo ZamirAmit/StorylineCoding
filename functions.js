@@ -877,3 +877,87 @@ try {
 
 }
 */
+var GetCurrentUSerDetails = function(url) {
+        return new Promise(function(resolve, reject) {
+            url = url + "/_api/web/currentuser";
+            $.ajax({
+                url: url,
+                headers: {
+                    Accept: "application/json;odata=verbose"
+                },
+                async: false,
+                resolve("Stuff worked!");
+                reject(Error("It broke"));
+            });
+            /* stuff using username, password */
+
+
+        });
+
+        GetCurrentUSerDetails(url).then(function(data) {
+            console.log(data);
+        });
+        url = "https://365openu.sharepoint.com/sites/digital-books/test-werb/";
+        // Calling Promise:
+        GetCurrentUSerDetails(url)
+            .then((data) => {
+                console.log(data)
+
+            })
+            .catch((error) => {
+                console.log(error)
+            });
+
+        // Create a function with Promise:
+        function GetCurrentUSerDetails(url) {
+            return new Promise((resolve, reject) => {
+                    // Must referance JQUERY:
+                    $.ajax({
+                            url: url + "/_api/web/currentuser",
+                            headers: {
+                                Accept: "application/json;odata=verbose"
+                            },
+                            async: false,
+                            success: function(data) {
+                                resolve(data)
+                            },
+                            error: function(error) {
+                                reject(error)
+                            },
+                        }) // end of request
+                }) // end of Promise
+        } // end of function
+
+        function LoadSCcript(src) {
+            return new Promise((resolve, reject) => {
+
+                    var arr = src.split("/");
+                    var last_item = arr.length - 1;
+                    var file_name = arr[last_item];
+                    var script = document.createElement("script");
+
+                    script.src = src;
+                    document.getElementsByTagName("head")[0].appendChild(script);
+
+                    script.onload = function() {
+                        resolve("Script: " + file_name + " loaded and ready");
+
+                    }
+                    script.onerror = function() {
+                        reject('Faild to load the script: ' + file_name);
+
+                    }
+
+                }) // end of Promise
+        }
+
+        src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js";
+        // Calling Promise:
+        LoadSCcript(src)
+            .then((data) => {
+                console.log(data)
+
+            })
+            .catch((error) => {
+                console.log(error)
+            });

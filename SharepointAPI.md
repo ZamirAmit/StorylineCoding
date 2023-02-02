@@ -10,85 +10,114 @@ You can run this JS code directley one ypur Sahrepoint page via embed code featu
 <!-- 
     This is working from same Sharepoint domain:
 -->
-<script src="/_layouts/15/SP.Runtime.js" type="text/javascript"></script>
-<script src="/_layouts/15/SP.js" type="text/javascript"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript">
-  ExecuteOrDelayUntilScriptLoaded(GetCurrentUserInfo, "sp.js");
-  function GetCurrentUserInfo() {
-    var cx = new SP.ClientContext.get_current();
-    currentUser = cx.get_web().get_currentUser();
-    cx.load(currentUser);
-    cx.executeQueryAsync(
-      Function.createDelegate(this, this.onSucceeded),
-      Function.createDelegate(this, this.onFailed)
-    );
-  }
 
-  function onSucceeded() {
-    userDetails.email = currentUser.get_loginName().split("|")[
-      currentUser.get_loginName().split("|").length - 1
-    ];
-    userDetails.FullName = currentUser.get_loginName();
-    //console.log(userDetails);
-  }
+  // Create a function with Promise:
+  function GetCurrentUSerDetails(url) {
+      return new Promise((resolve, reject) => {
+          // Must referance JQUERY:
+          $.ajax({
+              url: url + "/_api/web/currentuser",
+              headers: {
+                  Accept: "application/json;odata=verbose"
+              },
+              async: false,
+              success: function (data) {
+                  resolve(data)
+              },
+              error: function (error) {
+                  reject(error)
+              },
+          }) // end of request
+      }) // end of Promise
+    } // end of function
 
-  function onFailed(sender, args) {
-    console.log(
-      "Error: " + args.get_message() + "\nStackTrace: " + args.get_stackTrace()
-    );
-  }
+    // Calling Promise:
+    url = "Sharepoint website URL";
+  // Calling Promise:
+  GetCurrentUSerDetails(url)
+      .then((data) => {
+          console.log(data)
+
+      })
+      .catch((error) => {
+          console.log(error)
+      });
+
+  });
 </script>
 ```
 
 If you don't have the ability to customize the page you can load it programically:
-
 ```javascript
-function loadSCRIPT(src) {
-  var arr = src.split("/");
-  var last_item = arr.length - 1;
-  var file_name = arr[last_item];
-  var script = document.createElement("script");
-  script.onload = function () {
-    console.log("Script: " + file_name + " loaded and ready");
-    //player.SetVar("JQUERY", true);
-  };
+    // Define load script function with Promise:
+    function LoadSCcript(src) {
+        return new Promise((resolve, reject) => {
 
-  script.src = src;
-  document.getElementsByTagName("head")[0].appendChild(script);
-}
+            var arr = src.split("/");
+            var last_item = arr.length - 1;
+            var file_name = arr[last_item];
+            var script = document.createElement("script");
 
-function GetCurrentUserInfo() {
-  var cx = new SP.ClientContext.get_current();
-  currentUser = cx.get_web().get_currentUser();
-  cx.load(currentUser);
-  cx.executeQueryAsync(
-    Function.createDelegate(this, this.onSucceeded),
-    Function.createDelegate(this, this.onFailed)
-  );
-}
+            script.src = src;
+            document.getElementsByTagName("head")[0].appendChild(script);
 
-function onSucceeded() {
-  userDetails.email = currentUser.get_loginName().split("|")[
-    currentUser.get_loginName().split("|").length - 1
-  ];
-  userDetails.FullName = currentUser.get_loginName();
-  //console.log(userDetails);
-}
+            script.onload = function () {
+                resolve("Script: " + file_name + " loaded and ready");
 
-function onFailed(sender, args) {
-  console.log(
-    "Error: " + args.get_message() + "\nStackTrace: " + args.get_stackTrace()
-  );
-}
-/* Test your function: */
-var currentUser;
-var userDetails = {};
-var src = "/_layouts/15/SP.js";
-loadSCRIPT(src);
-src = "/_layouts/15/SP.Runtime.js";
-loadSCRIPT(src);
-ExecuteOrDelayUntilScriptLoaded(GetCurrentUserInfo, "sp.js");
+            }
+            script.onerror = function () {
+                reject('Faild to load the script: ' + file_name);
+
+            }
+
+        }) // end of Promise
+    } // end of function
+    
+    // Definne an AJAX call function with Promise:
+    function GetCurrentUSerDetails(url) {
+        return new Promise((resolve, reject) => {
+            // Must referance JQUERY:
+            $.ajax({
+                url: url + "/_api/web/currentuser",
+                headers: {
+                    Accept: "application/json;odata=verbose"
+                },
+                async: false,
+                success: function (data) {
+                    resolve(data)
+                },
+                error: function (error) {
+                    reject(error)
+                },
+            }) // end of request
+        }) // end of Promise
+    } // end of function
+
+        // Calling the Promises:
+        src = "jquery file ref";
+    // Calling Promise:
+    LoadSCcript(src)
+        .then((data) => {
+            url = "SharePoint website URL";
+            // Calling Promise:
+            GetCurrentUSerDetails(url)
+                .then((data) => {
+                    console.log(data)
+
+                })
+                .catch((error) => {
+                    console.log(error)
+                });
+
+        })
+        .catch((error) => {
+            console.log(error)
+        });
+
+
 ```
 
 ## How to get all data from list:
