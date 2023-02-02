@@ -125,43 +125,40 @@ If you don't have the ability to customize the page you can load it programicall
 This is how to retrive list items usint CAML query:
 
 ```javascript
-listName = "MicroFeed";
-siteUrl = "/sites/digital-books/test-werb/";
-camlQuery =
-  "<View>" +
-  "<Query>" +
-  "<OrderBy>" +
-  '<FieldRef Name="ID" Ascending="FALSE"/>' +
-  "</OrderBy>" +
-  "</Query>" +
-  "</View>";
-GetListQuery(siteUrl, listName, camlQuery);
+        // Create a function with Promise:
+        function GetListItems(url, list_name) {
+            return new Promise((resolve, reject) => {
+                    // Must referance JQUERY:
+                    $.ajax({
+                            url: url + "/_api/web/lists/getbytitle('" + list_name + "')/items",
+                            headers: {
+                                Accept: "application/json;odata=verbose"
+                            },
+                            async: false,
+                            success: function(data) {
+                                if (data.d.results.length > 0) {
+                                    resolve(data.d.results);
+                                }
 
-function GetListQuery(siteUrl, listName, camlQuery) {
-  var clientContext = new SP.ClientContext(siteUrl);
-  var list = clientContext.get_web().get_lists().getByTitle(listName);
+                            },
+                            error: function(error) {
+                                reject(error)
+                            },
+                        }) // end of request
+                }) // end of Promise
+        } // end of function
 
-  var caml = new SP.CamlQuery(camlQuery);
-  caml.set_viewXml(); // empty query also works
+        url = "Sharepoint website URL that contains the List";
+        list_name = "Specific List name in website";
+        // Calling Promise:
+        GetListItems(url, list_name)
+            .then((data) => {
+                console.log(data)
 
-  var listItemCollection = list.getItems(caml);
-
-  clientContext.load(listItemCollection); // i requested every property
-
-  clientContext.executeQueryAsync(
-    function () {
-      var listItemEnumerator = listItemCollection.getEnumerator();
-
-      while (listItemEnumerator.moveNext()) {
-        var oListItem = listItemEnumerator.get_current();
-        console.log(oListItem.get_item("Title"));
-      }
-    },
-    function (sender, args) {
-      window.console && console.log(args.get_message());
-    }
-  );
-}
+            })
+            .catch((error) => {
+                console.log(error)
+            });
 ```
 
 ## How to get insert data from list:

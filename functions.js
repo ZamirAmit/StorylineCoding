@@ -955,6 +955,53 @@ var GetCurrentUSerDetails = function(url) {
         // Calling Promise:
         LoadSCcript(src)
             .then((data) => {
+                url = "https://365openu.sharepoint.com/sites/digital-books/test-werb/";
+                // Calling Promise:
+                GetCurrentUSerDetails(url)
+                    .then((data) => {
+                        console.log(data)
+
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    });
+
+            })
+            .catch((error) => {
+                console.log(error)
+            });
+
+
+
+
+        // Create a function with Promise:
+        function GetListItems(url, list_name) {
+            return new Promise((resolve, reject) => {
+                    // Must referance JQUERY:
+                    $.ajax({
+                            url: url + "/_api/web/lists/getbytitle('" + list_name + "')/items",
+                            headers: {
+                                Accept: "application/json;odata=verbose"
+                            },
+                            async: false,
+                            success: function(data) {
+                                if (data.d.results.length > 0) {
+                                    resolve(data.d.results);
+                                }
+
+                            },
+                            error: function(error) {
+                                reject(error)
+                            },
+                        }) // end of request
+                }) // end of Promise
+        } // end of function
+
+        url = "https://365openu.sharepoint.com/sites/digital-books/test-werb";
+        list_name = "MicroFeed";
+        // Calling Promise:
+        GetListItems(url, list_name)
+            .then((data) => {
                 console.log(data)
 
             })
