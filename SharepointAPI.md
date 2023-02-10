@@ -94,7 +94,7 @@ function GetCurrentUSerDetails(url) {
 } // end of function
 
 // Calling the Promises:
-src = "jquery file ref";
+src = "jquery file ref"; //https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js
 // Calling Promise:
 LoadSCcript(src)
   .then((data) => {
@@ -151,7 +151,33 @@ GetListItems(url, list_name)
     console.log(error);
   });
 ```
+```javascript
+function GetRequestDigest(url) {
+  return new Promise((resolve, reject) => {
+    // Must referance JQUERY:
+    $.ajax({
+      url: url + "/_api/contextinfo",
+      type: "POST",
+      contentType: "application/json;odata=verbose",
+      success: function (data) {
+        resolve(data);
+      },
+      error: function (error) {
+        reject(error);
+      },
+    }); // end of request
+  }); // end of Promise
+} // end of function
+url = 'https://365openu.sharepoint.com/sites/digital-books/test-werb';
+GetRequestDigest(url)
+  .then((data) => {
+    console.log(data.d.d:FormDigestValue);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
+```
 ## How to insert data to a list:
 
 This is how to insert list items:
