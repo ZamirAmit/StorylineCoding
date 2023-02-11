@@ -92,25 +92,40 @@ function GetListItems(url, list_name) {
     }); // end of Promise
 } // end of function
 
-// Create a function with Promise:
-function GetListItemsQuery(url, list_name) {
-    return new Promise((resolve, reject) => {
-        // Must referance JQUERY:
-        $.ajax({
-            url: url + "/_api/web/lists/getbytitle('" + list_name + "')/items?$filter=name eq 'amit'",
-            headers: {
-                Accept: "application/json;odata=verbose",
-            },
-            async: false,
-            success: function(data) {
-                resolve(data);
-            },
-            error: function(error) {
-                reject(error);
-            },
-        }); // end of request
-    }); // end of Promise
-} // end of function
+var viewXml = {
+    ViewXml: "<View><Query /><ViewFields><FieldRef Name='Tile' /><FieldRef Name='SearchContent' /><FieldRef Name='ContentData' /></ViewFields><QueryOptions /></View>"
+}
+
+var call = jQuery.ajax({
+    url: _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getByTitle('test')/GetItems(query=@v1)?" +
+        "@v1=" + JSON.stringify(viewXml),
+    type: "POST",
+    dataType: "json",
+    headers: {
+        Accept: "application/json;odata=verbose",
+        "X-RequestDigest": jQuery("#__REQUESTDIGEST").val()
+    }
+});
+call.done(function(data, textStatus, jqXHR) {
+    var message = jQuery("#message");
+    message.text("Beverages");
+    message.append("<br/>");
+    jQuery.each(data.d.results, function(index, value) {
+        console.log(value.Title);
+
+    });
+});
+call.fail(function(jqXHR, textStatus, errorThrown) {
+    var response = "";
+    try {
+        var parsed = JSON.parse(jqXHR.responseText);
+        response = parsed.error.message.value;
+    } catch (e) {
+        response = jqXHR.responseText;
+    }
+    alert("Call failed. Error: " + response);
+});
+
 
 
 
