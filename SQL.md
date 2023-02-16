@@ -2,55 +2,20 @@
 
 ## What is SQL:
 
-SQL stands for  Structured Query Language. This language is designed for manipulating and retreving data from a Database.
+SQL stands for  Structured Query Language. This language is designed for manipulating and retreving data from a Database. all SQL statements called in general Queries.
 
 ## What is a Database:
 A database is a collection of organized data. All data stored in an electrical storage. All data is being organized inside tables with special relationship beetween them. This kind of relationship defines them as Relational databases, which are being control by different management sytems which will give them the name Relational database management systems, RDBMS.
 
+The building blocks of RDBMS is tables. Table contains fields and records. Each record and each field have values.
+
+## Primary goal:
+Our primary goal in this lesson is to practice writing queries which will help us analyse our learners acjivements.
 ## SQL syntax:
-
-```html
-<!-- 
-    This is working from same Sharepoint domain:
--->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script type="text/javascript">
-
-  // Create a function with Promise:
-  function GetCurrentUSerDetails(url) {
-      return new Promise((resolve, reject) => {
-          // Must referance JQUERY:
-          $.ajax({
-              url: url + "/_api/web/currentuser",
-              headers: {
-                  Accept: "application/json;odata=verbose"
-              },
-              async: false,
-              success: function (data) {
-                  resolve(data)
-              },
-              error: function (error) {
-                  reject(error)
-              },
-          }) // end of request
-      }) // end of Promise
-    } // end of function
-
-    // Calling Promise:
-    url = "Sharepoint website URL";
-  // Calling Promise:
-  GetCurrentUSerDetails(url)
-      .then((data) => {
-          console.log(data)
-
-      })
-      .catch((error) => {
-          console.log(error)
-      });
-
-  });
-</script>
+SQL syntax is very much like English so it is realy easy to understand it.
+This query for instance retreving all student name and addresses from student table.
+```sql
+SELECT StudentName, StudentAddress FROM  students;
 ```
 
 First we need to referance JQUERY:
