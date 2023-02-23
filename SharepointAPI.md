@@ -50,7 +50,7 @@ You can run this JS code directley one ypur Sahrepoint page via embed code featu
 </script>
 ```
 
-If you don't have the ability to customize the page you can load it programically:
+First we need to referance JQUERY:
 
 ```javascript
 // Define load script function with Promise:
@@ -72,7 +72,11 @@ function LoadSCcript(src) {
     };
   }); // end of Promise
 } // end of function
+```
 
+If we want to get the learner details we should call currentuser:
+
+```javascript
 // Definne an AJAX call function with Promise:
 function GetCurrentUSerDetails(url) {
   return new Promise((resolve, reject) => {
@@ -92,7 +96,10 @@ function GetCurrentUSerDetails(url) {
     }); // end of request
   }); // end of Promise
 } // end of function
+```
 
+```javascript
+score = {};
 // Calling the Promises:
 src = "jquery file ref"; //https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js
 // Calling Promise:
@@ -102,8 +109,14 @@ LoadSCcript(src)
     // Calling Promise:
     GetCurrentUSerDetails(url)
       .then((data) => {
-        console.log(data);
-      })
+
+        score.user = data;
+        GetCurrentUSerDetails(url)
+        .then((data) => {
+      }).catch((error) => {
+        
+        console.log(error);
+      });
       .catch((error) => {
         console.log(error);
       });
@@ -151,6 +164,7 @@ GetListItems(url, list_name)
     console.log(error);
   });
 ```
+
 ```javascript
 function GetRequestDigest(url) {
   return new Promise((resolve, reject) => {
@@ -160,7 +174,7 @@ function GetRequestDigest(url) {
       type: "POST",
       contentType: "application/json;odata=verbose",
       success: function (data) {
-        resolve(data);
+        resolve(data.d.FormDigestValue);
       },
       error: function (error) {
         reject(error);
@@ -168,16 +182,16 @@ function GetRequestDigest(url) {
     }); // end of request
   }); // end of Promise
 } // end of function
-url = 'https://365openu.sharepoint.com/sites/digital-books/test-werb';
+url = "https://365openu.sharepoint.com/sites/digital-books/test-werb";
 GetRequestDigest(url)
   .then((data) => {
-    console.log(data.d.d:FormDigestValue);
+    RequestDigest = data;
   })
   .catch((error) => {
     console.log(error);
   });
-
 ```
+
 ## How to insert data to a list:
 
 This is how to insert list items:
