@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="extensions/sticky-header/bootstrap-table-sticky-header.css">
+    <script src="extensions/sticky-header/bootstrap-table-sticky-header.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            direction: rtl;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-muted text-center p-3">-דוגמה ל <mark>שאלות ותשובות</mark></h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h3>שאלה מספר 1</h3>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    תשובה לשאלה מספר 1
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h3>שאלה מספר 2</h3>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    תשובה לשאלה מספר 2
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h3>שאלה מספר 3</h3>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    תשובה לשאלה מספר 3
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-2">
+
+            </div>
+        </div>
+
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-12" style="margin-top: 100px;">
+                <table class="table">
+                    <thead style="position: sticky;top: 0; padding-top: 20px;" class=" bg-dark text-white">
+                        <tr>
+                            <th class="header" scope="col">Course</th>
+                            <th class="header" scope="col">Start Date</th>
+                            <th class="header" scope="col">Fees</th>
+                            <th class="header" scope="col">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CAT</td>
+                            <td>1st Aug</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>GATE</td>
+                            <td>5th July</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>DSA</td>
+                            <td>1st July</td>
+                            <td>2499</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>Java Backend</td>
+                            <td>28th March</td>
+                            <td>10999</td>
+                            <td>Offline</td>
+                        </tr>
+                        <tr>
+                            <td>SDE</td>
+                            <td>1st Sept</td>
+                            <td>299</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>SUDO Placement</td>
+                            <td>20th Sept</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>CAT</td>
+                            <td>1st Aug</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>GATE</td>
+                            <td>5th July</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>DSA</td>
+                            <td>1st July</td>
+                            <td>2499</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>Java Backend</td>
+                            <td>28th March</td>
+                            <td>10999</td>
+                            <td>Offline</td>
+                        </tr>
+                        <tr>
+                            <td>SDE</td>
+                            <td>1st Sept</td>
+                            <td>299</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>SUDO Placement</td>
+                            <td>20th Sept</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>CAT</td>
+                            <td>1st Aug</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>GATE</td>
+                            <td>5th July</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>DSA</td>
+                            <td>1st July</td>
+                            <td>2499</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>Java Backend</td>
+                            <td>28th March</td>
+                            <td>10999</td>
+                            <td>Offline</td>
+                        </tr>
+                        <tr>
+                            <td>SDE</td>
+                            <td>1st Sept</td>
+                            <td>299</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>SUDO Placement</td>
+                            <td>20th Sept</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>CAT</td>
+                            <td>1st Aug</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>GATE</td>
+                            <td>5th July</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>DSA</td>
+                            <td>1st July</td>
+                            <td>2499</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>Java Backend</td>
+                            <td>28th March</td>
+                            <td>10999</td>
+                            <td>Offline</td>
+                        </tr>
+                        <tr>
+                            <td>SDE</td>
+                            <td>1st Sept</td>
+                            <td>299</td>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <td>SUDO Placement</td>
+                            <td>20th Sept</td>
+                            <td>Free</td>
+                            <td>Online</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="mx-auto" style="width: 300px;">
+
+        </div>
+        <div class="row">
+            <div class="col-12" style="margin-top: 100px;">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">בית</a></li>
+                    <li><a data-toggle="tab" href="#menu1">כרטיסייה ראשונה</a></li>
+                    <li><a data-toggle="tab" href="#menu2">כרטיסייה שנייה</a></li>
+                    <li><a data-toggle="tab" href="#menu3">כרטיסייה שלישית</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <h3>בית</h3>
+                        <p>פירוט על דף הבית</p>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <h3>כרטיסייה ראשונה</h3>
+                        <p>פירוט על כרטיסייה ראשונה</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>כרטיסייה שנייה</h3>
+                        <p>פירוט על כרטיסייה שנייה</p>
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                        <h3>כרטיסייה שלישית</h3>
+                        <p>פירוט על כרטיסייה שלישית</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" style="margin-top: 100px;">
+                <p>
+                    <span class="label label-default" style="padding: 10px">Default Label</span>
+                    <span class="label label-primary" style="padding: 10px">Primary Label</span>
+                    <span class="label label-success" style="padding: 10px">Success Label</span>
+                    <span class="label label-info" style="padding: 10px">Info Label</span>
+                    <span class="label label-warning" style="padding: 10px">Warning Label</span>
+                    <span class="label label-danger" style="padding: 10px">Danger Label</span>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</html>
