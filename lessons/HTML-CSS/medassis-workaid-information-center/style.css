@@ -85,6 +85,7 @@ img {
     height: 200px;
     margin: auto;
     display: block;
+    top: 0;
 }
 
 .sub-title {
@@ -94,7 +95,7 @@ img {
 }
 
 .item__overlay {
-    position: absolute;
+    position: ;
     top: 0;
     bottom: 0;
     left: 0;
