@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>דוח מסכם לביצוע נתוני לומדים</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="grades-data.js"></script>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <h1>טבלת סיכום ביצועי לומדים</h1>
+    <h2>
+        לפי הנתונים המופיעים בקובץ
+        <span> <a class="yellow" href="grades-data.js" target="_blank">הזה</a></span> הם:
+    </h2>
+    <table class="container">
+        <thead>
+            <tr>
+                <th>
+                    <h1>ציון ממוצע</h1>
+                </th>
+                <th>
+                    <h1>זמן ממוצע</h1>
+                </th>
+                <th>
+                    <h1>כמות עוברים</h1>
+                </th>
+                <th>
+                    <h1>כמות נכשלים</h1>
+                </th>
+                <th>
+                    <h1>כמות נבחנים</h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="average-score">יש להזין כאן את הציון הממוצע</td>
+                <td id="average-time"> יש להזין כאן את הזמן הממוצע</td>
+                <td id="amount-pass"> יש להזין כאן את כמות העוברים</td>
+                <td id="amount-fail"> יש לציין כאן את כמות הנכשלים</td>
+                <td id="amount"> יש לציין כאן את כמות הנבחנים</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- partial -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
