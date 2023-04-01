@@ -1,3 +1,14 @@
+const password = "1234";
+let userResponse = "";
+
+do {
+    responseNotEmpty = userResponse !== "";
+    if (responseNotEmpty) {
+        alert("דרושה סיסמה כדי לצפות בדף זה - נסו שוב!");
+    }
+    userResponse = prompt("מהי סיסמת הכניסה לדף?");
+} while (userResponse !== password);
+
 // This is the referance to the other external JS file:
 let data = studentsData.data;
 
