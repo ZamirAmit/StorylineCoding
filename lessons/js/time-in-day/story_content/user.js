@@ -2,7 +2,7 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6pWozi4cHxN":
+      case "5mCuoBIRdjo":
         Script1();
         break;
   }
@@ -12,30 +12,30 @@ function Script1()
 {
   const date = new Date(); // Getting the and date of the present
 const hours = date.getHours();
-let player = GetPlayer();
+const player = GetPlayer();
 
-let time_in_day;
-IsMOrning = hours >= 5 && hours < 12;
-IsNoon = hours >= 12 && hours < 17;
-IsAfterNoon = hours >= 17 && hours < 19;
+let TimeInDay;
+const IsMOrning = hours >= 5 && hours < 12;
+const IsNoon = hours >= 12 && hours < 17;
+const IsAfterNoon = hours >= 17 && hours < 19;
 
 if (IsMOrning) {
-    time_in_day = "Morning";
+    TimeInDay = "Morning";
 } else if (IsNoon) {
-    time_in_day = "Noon";
+    TimeInDay = "Noon";
 } else if (IsAfterNoon) {
-    time_in_day = "AfterNoon";
+    TimeInDay = "AfterNoon";
 
 } else {
-    time_in_day = "Night";
+    TimeInDay = "Night";
 }
-player.SetVar('time_in_day', time_in_day);
+player.SetVar('timeInDay', TimeInDay);
 time =
     date.getHours().toString().padStart(2, '0') +
     ":" +
     date.getMinutes().toString().padStart(2, '0');
 player.SetVar('time', time);
 
-console.log(time_in_day);
+console.log(TimeInDay);
 }
 
