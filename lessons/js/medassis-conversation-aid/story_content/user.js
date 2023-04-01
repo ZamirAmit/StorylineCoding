@@ -1,17 +1,19 @@
-function ExecuteScript(strId) {
-    switch (strId) {
-        case "6LgOuknO9Rm":
-            Script1();
-            break;
-        case "5nW3cr4JPmD":
-            Script2();
-            break;
-    }
+function ExecuteScript(strId)
+{
+  switch (strId)
+  {
+      case "6jClNXVnGVB":
+        Script1();
+        break;
+      case "6Z5aCBba1x3":
+        Script2();
+        break;
+  }
 }
 
-function Script1() {
-
-    /* This code is for MALE customer: */
+function Script1()
+{
+      /* This code is for MALE customer: */
     let player = GetPlayer();
     let operatorName = player.GetVar('operatorName');
     let companyName = player.GetVar('companyName');
@@ -27,14 +29,15 @@ function Script1() {
     let save_receipt_male = ' יש לשמור את הקבלה ואת הדוחות הרפואיים בכדי להגיש תביעה לחברת ' +
         companyName +
         ' זכאות להחזר תיבדק בהתאם לתנאי הפוליסה.';
-    let Conversation = greetings +
+    let conversation = greetings +
         intro_male +
         save_receipt_male;
-    player.SetVar('Conversation', Conversation);
+    player.SetVar('conversation', conversation);
 }
 
-function Script2() {
-    /* This code is for FEMALE customer: */
+function Script2()
+{
+      /* This code is for FEMALE customer: */
     let player = GetPlayer();
     let operatorName = player.GetVar('operatorName');
     let companyName = player.GetVar('companyName');
@@ -51,6 +54,6 @@ function Script2() {
         companyName +
         ' זכאות להחזר תיבדק בהתאם לתנאי הפוליסה.';
     let Conversation = greetings + intro_female + save_receipt_female;
-    player.SetVar('Conversation', Conversation);
-
+    player.SetVar('conversation', Conversation);
 }
+
