@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- This is where the HTML page starts-->
+<html lang="he">
+<!-- lang tells the browser that
+    this page's langauge is Hebrew
+-->
+
+<!-- The head of the page defines
+        all the settings of the page
+    -->
+
+<head>
+
+    <meta charset="utf-8" />
+    <!-- charset tells the browser that
+            it should use Hebrew encoding
+            -->
+    <title>מושגים חיוניים medassis</title>
+    <!-- Title element tells the browser what
+            is the name of the tab the user will see
+        -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<!-- This the body of the page. you can
+        see elements that are inside it
+    -->
+
+<body>
+    <div class="cover-img">
+        <img id="logo" src="medassis-logo.jpg" alt="לוגו של החברה">
+
+    </div>
+
+    <div class="nav-mobile">
+
+        <h3 id="nav-header-mobile">בחר לאיזה פרק תרצה לנווט</h3>
+        <input id="search" type="search" placeholder="איתור מושג...">
+
+
+        <select class="nav-list-mobile" onchange="location=this.value;">
+                <option value="#gyno">גניקולוגיה​</option>
+                <option value="#urology">אורולוגיה</option>
+                <option value="#cardio">קרדיולוגיה</option>
+                <option value="#skeleton-hebrew">מבנה השלד</option>
+            </select>
+
+
+    </div>
+    <div class="nav">
+        <div class="nav-header-container">
+            <h2 id="nav-header">תפריט ניווט</h2>
+
+
+        </div>
+        <div class="nav-list-container">
+            <input id="search" type="search" placeholder="איתור מושג...">
+            <ul class="nav-list">
+                <li class="nav-list-item"><a class="nav-list-item-link" href="#gyno">גניקולוגיה​</a></li>
+                <li class="nav-list-item"><a class=" nav-list-item-link " href="#urology ">אורולוגיה</a></li>
+                <li class="nav-list-item"><a class="nav-list-item-link" href="#cardio">קרדיולוגיה</a></li>
+                <li class="nav-list-item"><a class=" nav-list-item-link " href="#skeleton-hebrew ">מבנה השלד</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <div class="main-article ">
+        <h1 id="terms-header ">מונחים רפואיים​ </h1>
+        <div class="content ">
+            <h3 id="gyno"> גניקולוגיה </h3>
+            <h4>סיפור מקרה לדוגמה (14389)</h4>
+            <p>
+                בת 31, בהריון, אושפזה ב15.04 בלונדון, אנגליה בביה"ח (St. tomas hospital) עקב לחץ דם גבוה </p>
+            <div class="terms">
+                <h4> מושגים שחשוב להכיר</h4>
+            </div>
+            <div class="terms">
+                <span class="terms-remember">דימום וגינלי </span>
+                <span class="terms-remember">דימום מהנרתיק</span>
+            </div>
+        </div>
+
+        <br>
+        <div class="content">
+            <h3 id="urology">אורולוגיה</h3>
+            <h4>סיפור מקרה לדוגמה (14373)</h4>
+            <p> בן 59 טופל ב12/04 בבי"ח HAMS בנפאל, קטמנדו בשלאצירה בשתן, עבר צינתור והכנסת קטטר </p>
+            <div class="terms">
+                <h4> מושגים שחשוב להכיר</h4>
+            </div>
+            <div class="terms">
+
+                <span class="terms-remember">קטטר שתן </span>
+                <span class="terms-remember">אבנים בדרכי השתן</span>
+                <span class="terms-remember">דלקת בדרכי השתן</span>
+            </div>
+        </div>
+
+        <br>
+        <div class="content">
+            <h3 id="cardio"> קרדיולוגיה </h3>
+            <h4>סיפור מקרה לדוגמה (14374) </h4>
+            <p>
+                בן 69 טופל בבי"ח בלפקדה, ביוון בשל הפרעות קצת לב, בתלונה פלפיטציות </p>
+            <div class="terms">
+                <h4> מושגים שחשוב להכיר</h4>
+            </div>
+            <div class="terms">
+
+                <span class="terms-remember" title="ניתן לטוס רק לאחר 5-10 ימים המאירוע">אוטם בשריר הלב (MI) <img
+                        src="plain.png" width="20px"></span>
+                <span class="terms-remember" title="ניתן לטוס רק לאחר 5-10 ימים המאירוע">הפרעות קצב <img class="icon"
+                        src="
+                        plain.png" width="20px"></span>
+                <span class="terms-remember">אקג </span>
+                <span class="terms-remember">אי ספיקת לב </span>
+                <span class="terms-remember">בצקת ריאות </span>
+                <span class="terms-remember">סטורציה </span>
+                <span class="terms-remember">דופק ולחץ דם </span>
+            </div>
+
+
+            <div class="content">
+                <h3 id="skeleton-hebrew"> מבנה השלד </h3>
+                <div class="center-img">
+                    <img class="illustration" src="skekleton-hebrew.jpg" alt="מבנה השלד">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
