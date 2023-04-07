@@ -98,7 +98,35 @@
 
     <script src="script.js"></script>
     <script>
-        document.addEventListener('onload', alert('Hello!'));
+        // Change text content of element:
+        document.getElementById('1').innerHTML = 'new value';
+        // Change background color of all elements with item class name:
+        document.getElementsByClassName('item').style.backgroundColor = 'black';
+        // Vhreate paragraph element:
+        let p = document.createElement('p');
+        // Add it a text:
+        p.innerHTML = 'hello!';
+        // Adding it to the body:
+        document.body.appendChild(p);
+        // Deleting element from document:
+        document.getElementById("div-02").remove();
+        // Adding existing class to an element:
+        element.classList.add("mystyle");
+        // Hide all paragraphs in document:
+        document.querySelectorAll('p').style.display = 'none';
+
+        // Change text content of element:
+        $("#1").html("'new value'");
+        // Change background color of all elements with item class name:
+        $("item").css("background-color", "black");
+        // Create paragraph element:
+        $("body").append("<p>hello!</p>");
+        // Deleting element from document:
+        $('#div-02').remove();
+        // Adding existing class to an element:
+        element.classList.add("mystyle");
+        // Hide all paragraphs in document:
+        document.querySelectorAll('p').style.display = 'none';
     </script>
 </body>
 
