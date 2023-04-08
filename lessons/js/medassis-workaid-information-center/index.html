@@ -98,35 +98,25 @@
 
     <script src="script.js"></script>
     <script>
-        // Change text content of element:
-        document.getElementById('1').innerHTML = 'new value';
-        // Change background color of all elements with item class name:
-        document.getElementsByClassName('item').style.backgroundColor = 'black';
-        // Vhreate paragraph element:
-        let p = document.createElement('p');
-        // Add it a text:
-        p.innerHTML = 'hello!';
-        // Adding it to the body:
-        document.body.appendChild(p);
-        // Deleting element from document:
-        document.getElementById("div-02").remove();
-        // Adding existing class to an element:
-        element.classList.add("mystyle");
-        // Hide all paragraphs in document:
-        document.querySelectorAll('p').style.display = 'none';
+        // When the HTML file is fully loaded its name will be printed in the console log:
+        $(document).ready(function() {
+            console.log(this.href);
+            // Any input element will change its color when user is clicks inside that field:
+            $("input").focus(function() {
+                $(this).css("background-color", "#cccccc");
+            });
 
-        // Change text content of element:
-        $("#1").html("'new value'");
-        // Change background color of all elements with item class name:
-        $("item").css("background-color", "black");
-        // Create paragraph element:
-        $("body").append("<p>hello!</p>");
-        // Deleting element from document:
-        $('#div-02').remove();
-        // Adding existing class to an element:
-        element.classList.add("mystyle");
-        // Hide all paragraphs in document:
-        document.querySelectorAll('p').style.display = 'none';
+            // Any clicked paragrph wil disapear:
+            $("p").on("click", function() {
+                $(this).hide();
+
+                // When user modify value inside the search its value will apear on alert window:
+                $("#search").keyup(function() {
+                    alert(this.value());
+                });
+            });
+
+        });
     </script>
 </body>
 
