@@ -96,28 +96,8 @@
 
     </div>
 
-    <script src="script.js"></script>
-    <script>
-        // When the HTML file is fully loaded its name will be printed in the console log:
-        $(document).ready(function() {
-            console.log(this.href);
-            // Any input element will change its color when user is clicks inside that field:
-            $("input").focus(function() {
-                $(this).css("background-color", "#cccccc");
-            });
+    <script type="text/javascript" src="script.js"></script>
 
-            // Any clicked paragrph wil disapear:
-            $("p").on("click", function() {
-                $(this).hide();
-
-                // When user modify value inside the search its value will apear on alert window:
-                $("#search").keyup(function() {
-                    alert(this.value());
-                });
-            });
-
-        });
-    </script>
 </body>
 
 </html>
