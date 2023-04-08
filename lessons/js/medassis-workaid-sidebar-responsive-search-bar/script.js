@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    $("#search").keyup(function() {
+    $(".search").keyup(function() {
+
         // removes all white spaces:
         let searchValue = $.trim(this.value);
 
