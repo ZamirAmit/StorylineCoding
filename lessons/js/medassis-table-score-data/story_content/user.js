@@ -2,29 +2,32 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "614uqwa4Gts":
+      case "5WVSGGr7Qrz":
         Script1();
         break;
-      case "62fMAVMV3qE":
+      case "5rmiAbmCNq5":
         Script2();
         break;
-      case "5X6r8Rjxs8z":
+      case "6GYOEni8k6i":
         Script3();
         break;
-      case "6hu0uWx0kqo":
+      case "5w4thK2vvS2":
         Script4();
         break;
-      case "6JM8Gxz4jnh":
+      case "5Xn14RdNWOd":
         Script5();
         break;
-      case "5WeTv67dAbP":
+      case "5uTRI16fyrw":
         Script6();
         break;
-      case "6MvG4UMH3zg":
+      case "6B5hdo0E44g":
         Script7();
         break;
-      case "5XE4o11V76U":
+      case "6mlruTi8uwA":
         Script8();
+        break;
+      case "5yEwpMTCTYv":
+        Script9();
         break;
   }
 }
@@ -228,6 +231,47 @@ console.log('Finish loading questions to table!');
 
 function Script6()
 {
+  let url = "https://script.google.com/macros/s/AKfycbwnkRWztcbuVGjw5xaotgsNCqJWDxQyjRDmXStb0Z8AXIpE2biiAUb_USPDmYcOJWmt/exec";
+let player = GetPlayer();
+
+ // Converting string to object:
+let data = JSON.parse(player.GetVar('QuizObjStr'));
+
+// Adding data table name:
+data.table = 'Interactions';
+
+// Store data with XMLHttpRequest //
+// Creatubg an XMLHttpRequest object:
+var xhr = new XMLHttpRequest();
+// Adding on ready event for the XMLHttpRequest object
+xhr.addEventListener("readystatechange", function() {
+    // readyState === 4 means OK:
+    if (this.readyState === 4) {
+
+        // This is the response from the server:
+        response = this.responseText;
+
+        // Displaying response in JSON format:
+        console.log(JSON.parse(response));
+        player.SetVar('getDetails',true);
+    }
+});
+
+// opening the XMLHttpRequest object:
+xhr.open("POST", url);
+
+// Adding this header for nececury server reason:
+xhr.setRequestHeader("Content-Type", "text/plain");
+
+// Sending the data in text format:
+data = JSON.stringify(data);
+
+// Sending the request to the server:
+xhr.send(data);
+}
+
+function Script7()
+{
   var player = GetPlayer();
 // Define load script function with Promise:
 function LoadSCcript(src) {
@@ -308,7 +352,7 @@ LoadSCcript(src)
 
 }
 
-function Script7()
+function Script8()
 {
   // Store Course data into sharepoint:
 CourseObj = StoreQuiz();
@@ -355,7 +399,7 @@ GetRequestDigest(url)
     });
 }
 
-function Script8()
+function Script9()
 {
   
 url = '//121tikshuv.sharepoint.com/sites/test-2';

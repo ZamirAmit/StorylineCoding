@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="false">
             <options>
-              <option name="title_text" value="who-we-are-medassis-1246" />
+              <option name="title_text" value="who-we-are-medassis-http-request" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -1594,10 +1594,10 @@
   </nav_data>
   <resource_data description="&lt;p align='right'&gt;&lt;font face='Varela Round' style='font-size: 11px;' size='11' color='#464646'&gt;Here are some useful links and documents:&lt;/font&gt;&lt;/p&gt;">
     <resources>
-      <resource url="story_content/external_files/jquery.min.js" image="story_content/6MJ2YieRYFK.png" title="jquery.min" />
-      <resource url="story_content/external_files/sprestlib.bundle.js" image="story_content/6PXhiAftVTt.png" title="sprestlib.bundle" />
-      <resource url="story_content/external_files/sprestlib.js" image="story_content/5zWjjzS0MX6.png" title="sprestlib" />
-      <resource url="story_content/external_files/store-quiz-data.js" image="story_content/5d3cBWXT24R.png" title="store-quiz-data" />
+      <resource url="story_content/external_files/jquery.min.js" image="story_content/6pMVzrvKUtJ.png" title="jquery.min" />
+      <resource url="story_content/external_files/sprestlib.bundle.js" image="story_content/6DYj250uuUI.png" title="sprestlib.bundle" />
+      <resource url="story_content/external_files/sprestlib.js" image="story_content/6HqOmRiD5YR.png" title="sprestlib" />
+      <resource url="story_content/external_files/store-quiz-data.js" image="story_content/6GeUyrvoRDb.png" title="store-quiz-data" />
     </resources>
   </resource_data>
   <transcript_data />
