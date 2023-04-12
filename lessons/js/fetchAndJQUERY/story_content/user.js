@@ -2,11 +2,8 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6SOxcO0T2dS":
+      case "6Z7Hk3pgPCt":
         Script1();
-        break;
-      case "6nlLpC52WZm":
-        Script2();
         break;
   }
 }
@@ -34,7 +31,7 @@ fetch(file, headers)
     .then(function (text) {
         rows = text.split('\n');
         const rndInt = randomIntFromInterval(1, rows.length - 1);
-        question = rows[rndInt].split(',');
+        question = rows[rndInt].split('|');
 
         player.SetVar('questionTitle', question[0]);
         player.SetVar('correctAnswer', question[1]);
@@ -44,11 +41,5 @@ fetch(file, headers)
         player.SetVar('failFeedback', question[5]);
 
     });
-}
-
-function Script2()
-{
-  let textpath = "story_content/external_files/questions.txt";
-window.open(textpath);
 }
 
