@@ -1569,13 +1569,18 @@
   <nav_data>
     <outline>
       <links>
-        <slidelink slideid="_player.5oETOaNrukY.6f2swY5N09R" displaytext="Drag and Drop" expand="false" type="slide" />
+        <slidelink slideid="_player.5wNB7ltIq4z" displaytext="Untitled Scene" expand="true" type="slide">
+          <links>
+            <slidelink slideid="_player.5wNB7ltIq4z.5ngljlEyywY" displaytext="Untitled Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5wNB7ltIq4z.6jYugWniJYp" displaytext="Drag and Drop" expand="false" type="slide" />
+          </links>
+        </slidelink>
       </links>
     </outline>
   </nav_data>
   <resource_data description="&lt;p align='right'&gt;&lt;font face='Varela Round' style='font-size: 11px;' size='11' color='#464646'&gt;Here are some useful links and documents:&lt;/font&gt;&lt;/p&gt;">
     <resources>
-      <resource url="story_content/external_files/questions.txt" image="story_content/6hzQySa9yRP.png" title="questions" />
+      <resource url="story_content/external_files/questions.txt" image="story_content/6Sbptk3crIB.png" title="questions" />
     </resources>
   </resource_data>
   <transcript_data />
