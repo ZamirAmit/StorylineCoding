@@ -2,7 +2,7 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6CRmryOrSQD":
+      case "5rBm8e6Sfu0":
         Script1();
         break;
   }
@@ -11,6 +11,13 @@ function ExecuteScript(strId)
 function Script1()
 {
   
+function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+const rndInt = randomIntFromInterval(1, 6)
+console.log(rndInt)
+
 let player = GetPlayer();
 let file = "story_content/external_files/questions.txt";
 var headers = new Headers();
@@ -23,8 +30,9 @@ fetch(file, headers)
     })
     .then(function (text) {
         rows = text.split('\n');
-        question = rows[1].split(',');
-        
+        const rndInt = randomIntFromInterval(1, rows.length - 1);
+        question = rows[rndInt].split(',');
+
         player.SetVar('questionTitle', question[0]);
         player.SetVar('correctAnswer', question[1]);
         player.SetVar('firstDistractor', question[2]);
