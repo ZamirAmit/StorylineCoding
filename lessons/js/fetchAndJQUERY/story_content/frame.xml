@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="false">
             <options>
-              <option name="title_text" value="יחידת טיפול במבוטח מקצה לקצה" />
+              <option name="title_text" value="שליפת נתונים מתוך קובץ טקסט חיצוני" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -1575,7 +1575,7 @@
   </nav_data>
   <resource_data description="&lt;p align='right'&gt;&lt;font face='Varela Round' style='font-size: 11px;' size='11' color='#464646'&gt;Here are some useful links and documents:&lt;/font&gt;&lt;/p&gt;">
     <resources>
-      <resource url="story_content/external_files/questions.txt" image="story_content/6YAQJLIOvWp.png" title="questions" />
+      <resource url="story_content/external_files/questions.txt" image="story_content/6j7PxD6Xwx7.png" title="questions" />
     </resources>
   </resource_data>
   <transcript_data />
