@@ -2,8 +2,11 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6NpaSn7lqql":
+      case "6SOxcO0T2dS":
         Script1();
+        break;
+      case "6nlLpC52WZm":
+        Script2();
         break;
   }
 }
@@ -41,5 +44,11 @@ fetch(file, headers)
         player.SetVar('failFeedback', question[5]);
 
     });
+}
+
+function Script2()
+{
+  let textpath = "story_content/external_files/questions.txt";
+window.open(textpath);
 }
 
