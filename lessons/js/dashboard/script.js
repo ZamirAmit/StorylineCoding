@@ -1,10 +1,15 @@
 url = "data/grades-data.json";
 
 async function fetchDataFromApi() {
-    const res = await fetch(url);
-    console.log(res);
+    const res = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+        },
+    });
     const json = await res.json();
-    return json.joke;
+    return json;
+
 }
 
 function finish(joke) {
