@@ -1,4 +1,4 @@
-url = "data/grades-data.json";
+url = "grades-data.json";
 
 async function fetchDataFromApi() {
     const res = await fetch(url, {
