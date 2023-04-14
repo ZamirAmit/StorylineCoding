@@ -1,19 +1,6 @@
-google.charts.load('current', {
-    'packages': ['corechart']
-});
-google.charts.setOnLoadCallback(function() {
-    drawPieChart();
-    drawLinChart();
-});
+function drawPieChart(dataPie) {
 
-function drawPieChart() {
-
-    let data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work', 11],
-        ['Eat', 2],
-
-    ]);
+    let data = google.visualization.arrayToDataTable(dataPie);
 
     let options = {
         legend: {
@@ -30,19 +17,12 @@ function drawPieChart() {
 
 }
 
-function drawLinChart() {
-    let data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales', 'Expenses'],
-        ['2004', 1000, 400],
-        ['2005', 1170, 460],
-        ['2006', 660, 1120],
-        ['2007', 1030, 540]
-    ]);
+function drawLinChart(dataLine) {
+    let data = google.visualization.arrayToDataTable(dataLine);
 
     let options = {
-        title: 'Company Performance',
         curveType: 'function',
-        legend: { position: 'bottom' }
+        legend: { position: 'none' }
     };
 
     let chart = new google.visualization.LineChart(document.getElementById('curve_chart'));

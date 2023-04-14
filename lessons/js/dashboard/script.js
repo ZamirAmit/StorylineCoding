@@ -20,14 +20,22 @@ function getDataFromJson(json) {
         totalGrades: 0,
         totalTime: 0,
         passAmount: 0,
-        failAmount: 0
+        failAmount: 0,
+        frequency: {}
 
     }
     for (_line of data) {
         // += is short for: totalGrades = totalGrades +_line.StudentGrade;
         dashboardObject.totalGrades += _line.StudentGrade;
         dashboardObject.totalTime += _line.StudentTotalTime;
+        if (dashboardObject.frequency[_line.StudentGrade]) {
+            //console.log(_line.StudentGrade);
+            dashboardObject.frequency[_line.StudentGrade] += 1;
 
+        } else {
+            dashboardObject.frequency[_line.StudentGrade] = 1;
+
+        }
         // Check if score has Pass status:
         if (_line.GradeStatus == 'Pass') {
             dashboardObject.passAmount++; // Add to pass
@@ -35,7 +43,16 @@ function getDataFromJson(json) {
             dashboardObject.failAmount++; // Add to fail
         }
     }
-    studentsAmount = data.length;
+    dataLine = [
+        ['Amount', 'Grade']
+    ];
+    for (key of Object.keys(dashboardObject.frequency)) {
+        dataLine.push([parseInt(key), dashboardObject.frequency[key]]);
+
+    }
+    dashboardObject.dataLine = dataLine;
+    delete dashboardObject.frequency;
+    dashboardObject.studentsAmount = data.length;
     // Average  = sum of group / amount of group.
     averageGrade = Math.round(dashboardObject.totalGrades / studentsAmount);
     averageTime = dashboardObject.totalTime / studentsAmount;
@@ -52,15 +69,25 @@ function getDataFromJson(json) {
 async function init() {
 
     let json = await fetchDataFromApi();
-    sumData = getDataFromJson(json);
+    let sumData = getDataFromJson(json);
     console.log(sumData);
-
+    document.querySelector("#corseName").innerHTML = json.courseName;
+    document.querySelector("#total-students-value").innerHTML = sumData.failAmount + sumData.passAmount;
+    document.querySelector("#pass-tudents-value").innerHTML = sumData.passAmount;
+    document.querySelector("#fail-tudents-value").innerHTML = sumData.failAmount;
+    document.querySelector("#average-time-value").innerHTML = sumData.formatedAverageTime;
+    let dataPie = [
+        ['Task', 'Hours per Day'],
+        ['עברו את המבחן', sumData.passAmount],
+        ['נכשלו במבחן', sumData.failAmount]
+    ];
+    let dataLine = sumData.dataLine;
     google.charts.load('current', {
         'packages': ['corechart']
     });
     google.charts.setOnLoadCallback(function() {
-        drawPieChart();
-        drawLinChart();
+        drawPieChart(dataPie);
+        drawLinChart(dataLine);
     });
 }
 init();
