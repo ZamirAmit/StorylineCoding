@@ -1,1 +1,0 @@
-"use strict";$(function(){var date=new Date;$("#copyright-year").html(date.getFullYear())});
