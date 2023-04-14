@@ -34,10 +34,10 @@ function getDataFromJson(json) {
             dashboardObject.failAmount++; // Add to fail
         }
     }
-
+    studentsAmount = data.length;
     // Average  = sum of group / amount of group.
-    averageGrade = Math.round(totalGrades / studentsAmount);
-    averageTime = totalTime / studentsAmount;
+    averageGrade = Math.round(dashboardObject.totalGrades / studentsAmount);
+    averageTime = dashboardObject.totalTime / studentsAmount;
     // Converting from mili-seconds to seconds:
     averageTimeInSeconds = averageTime / 1000;
     // Converting from seconds to minutes:
