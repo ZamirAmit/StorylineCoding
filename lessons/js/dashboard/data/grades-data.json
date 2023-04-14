@@ -1,0 +1,526 @@
+{
+    "courseName": "לומדה בנושא מי אנחנו",
+    "data": [{
+            "studentId": 10000,
+            "studentGrade": 18,
+            "studentTotalTime": 1341386,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10001,
+            "studentGrade": 71,
+            "studentTotalTime": 1287444,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10002,
+            "studentGrade": 10,
+            "studentTotalTime": 1608871,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10003,
+            "studentGrade": 6,
+            "studentTotalTime": 1751584,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10004,
+            "studentGrade": 4,
+            "studentTotalTime": 1553303,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10005,
+            "studentGrade": 17,
+            "studentTotalTime": 1238407,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10006,
+            "studentGrade": 82,
+            "studentTotalTime": 1347389,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10007,
+            "studentGrade": 14,
+            "studentTotalTime": 1628393,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10008,
+            "studentGrade": 56,
+            "studentTotalTime": 1796810,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10009,
+            "studentGrade": 57,
+            "studentTotalTime": 1666126,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10010,
+            "studentGrade": 47,
+            "studentTotalTime": 1636949,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10011,
+            "studentGrade": 15,
+            "studentTotalTime": 1328078,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10012,
+            "studentGrade": 38,
+            "studentTotalTime": 1210097,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10013,
+            "studentGrade": 13,
+            "studentTotalTime": 1702073,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10014,
+            "studentGrade": 11,
+            "studentTotalTime": 1775888,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10015,
+            "studentGrade": 12,
+            "studentTotalTime": 1593463,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10016,
+            "studentGrade": 85,
+            "studentTotalTime": 1291021,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10017,
+            "studentGrade": 31,
+            "studentTotalTime": 1594809,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10018,
+            "studentGrade": 50,
+            "studentTotalTime": 1394817,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10019,
+            "studentGrade": 51,
+            "studentTotalTime": 1355287,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10020,
+            "studentGrade": 10,
+            "studentTotalTime": 1563866,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10021,
+            "studentGrade": 34,
+            "studentTotalTime": 1321538,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10022,
+            "studentGrade": 59,
+            "studentTotalTime": 1539503,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10023,
+            "studentGrade": 75,
+            "studentTotalTime": 1286722,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10024,
+            "studentGrade": 83,
+            "studentTotalTime": 1769768,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10025,
+            "studentGrade": 7,
+            "studentTotalTime": 1743805,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10026,
+            "studentGrade": 64,
+            "studentTotalTime": 1783255,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10027,
+            "studentGrade": 34,
+            "studentTotalTime": 1282946,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10028,
+            "studentGrade": 3,
+            "studentTotalTime": 1673696,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10029,
+            "studentGrade": 49,
+            "studentTotalTime": 1386825,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10030,
+            "studentGrade": 30,
+            "studentTotalTime": 1388302,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10031,
+            "studentGrade": 91,
+            "studentTotalTime": 1522721,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10032,
+            "studentGrade": 96,
+            "studentTotalTime": 1777671,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10033,
+            "studentGrade": 1,
+            "studentTotalTime": 1635378,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10034,
+            "studentGrade": 1,
+            "studentTotalTime": 1261965,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10035,
+            "studentGrade": 73,
+            "studentTotalTime": 1662882,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10036,
+            "studentGrade": 22,
+            "studentTotalTime": 1269571,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10037,
+            "studentGrade": 68,
+            "studentTotalTime": 1606828,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10038,
+            "studentGrade": 39,
+            "studentTotalTime": 1644519,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10039,
+            "studentGrade": 20,
+            "studentTotalTime": 1769498,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10040,
+            "studentGrade": 9,
+            "studentTotalTime": 1307315,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10041,
+            "studentGrade": 30,
+            "studentTotalTime": 1256220,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10042,
+            "studentGrade": 89,
+            "studentTotalTime": 1217191,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10043,
+            "studentGrade": 3,
+            "studentTotalTime": 1407378,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10044,
+            "studentGrade": 93,
+            "studentTotalTime": 1483340,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10045,
+            "studentGrade": 98,
+            "studentTotalTime": 1689933,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10046,
+            "studentGrade": 57,
+            "studentTotalTime": 1313131,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10047,
+            "studentGrade": 43,
+            "studentTotalTime": 1757137,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10048,
+            "studentGrade": 14,
+            "studentTotalTime": 1300576,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10049,
+            "studentGrade": 45,
+            "studentTotalTime": 1790499,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10050,
+            "studentGrade": 45,
+            "studentTotalTime": 1497035,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10051,
+            "studentGrade": 75,
+            "studentTotalTime": 1272046,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10052,
+            "studentGrade": 71,
+            "studentTotalTime": 1705330,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10053,
+            "studentGrade": 56,
+            "studentTotalTime": 1451198,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10054,
+            "studentGrade": 56,
+            "studentTotalTime": 1712062,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10055,
+            "studentGrade": 78,
+            "studentTotalTime": 1520012,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10056,
+            "studentGrade": 2,
+            "studentTotalTime": 1779710,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10057,
+            "studentGrade": 25,
+            "studentTotalTime": 1282182,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10058,
+            "studentGrade": 95,
+            "studentTotalTime": 1286594,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10059,
+            "studentGrade": 43,
+            "studentTotalTime": 1317495,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10060,
+            "studentGrade": 93,
+            "studentTotalTime": 1467345,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10061,
+            "studentGrade": 46,
+            "studentTotalTime": 1314881,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10062,
+            "studentGrade": 98,
+            "studentTotalTime": 1395125,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10063,
+            "studentGrade": 28,
+            "studentTotalTime": 1290040,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10064,
+            "studentGrade": 9,
+            "studentTotalTime": 1416219,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10065,
+            "studentGrade": 35,
+            "studentTotalTime": 1721200,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10066,
+            "studentGrade": 48,
+            "studentTotalTime": 1703697,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10067,
+            "studentGrade": 46,
+            "studentTotalTime": 1428636,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10068,
+            "studentGrade": 3,
+            "studentTotalTime": 1463758,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10069,
+            "studentGrade": 21,
+            "studentTotalTime": 1337740,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10070,
+            "studentGrade": 48,
+            "studentTotalTime": 1371958,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10071,
+            "studentGrade": 95,
+            "studentTotalTime": 1412697,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10072,
+            "studentGrade": 21,
+            "studentTotalTime": 1387344,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10073,
+            "studentGrade": 47,
+            "studentTotalTime": 1345844,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10074,
+            "studentGrade": 25,
+            "studentTotalTime": 1272589,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10075,
+            "studentGrade": 92,
+            "studentTotalTime": 1688040,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10076,
+            "studentGrade": 18,
+            "studentTotalTime": 1540446,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10077,
+            "studentGrade": 3,
+            "studentTotalTime": 1663720,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10078,
+            "studentGrade": 66,
+            "studentTotalTime": 1426228,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10079,
+            "studentGrade": 78,
+            "studentTotalTime": 1535245,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10080,
+            "studentGrade": 99,
+            "studentTotalTime": 1329126,
+            "gradeStatus": "Pass"
+        },
+        {
+            "studentId": 10081,
+            "studentGrade": 6,
+            "studentTotalTime": 1543179,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10082,
+            "studentGrade": 31,
+            "studentTotalTime": 1567912,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10083,
+            "studentGrade": 41,
+            "studentTotalTime": 1217000,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10084,
+            "studentGrade": 30,
+            "studentTotalTime": 1779212,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10085,
+            "studentGrade": 44,
+            "studentTotalTime": 1549882,
+            "gradeStatus": "Fail"
+        },
+        {
+            "studentId": 10086,
+            "studentGrade": 84,
+            "studentTotalTime": 1276738,
+            "gradeStatus": "Pass"
+        }
+    ]
+}
