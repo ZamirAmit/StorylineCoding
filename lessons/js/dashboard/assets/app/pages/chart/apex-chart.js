@@ -505,10 +505,7 @@ $(function() {
             themeOptions[themeVariantDefault]), {}, {
             series: [
                 44,
-                55,
-                13,
-                43,
-                22
+                55
             ],
             chart: {
                 width: 380,
@@ -520,9 +517,7 @@ $(function() {
             },
             labels: [
                 "Team A",
-                "Team B",
-                "Team C",
-                "Team D", "Team E"
+                "Team B"
             ],
             tooltip: {
                 fillSeriesColor: false
@@ -739,6 +734,47 @@ $(function() {
             markers: {
                 strokeColors: isDark ? colors.black : colors.white
             }
-        }))
+        }));
+
+        function loadPieChart(data) {
+            var chart8 = new ApexCharts(document.querySelector("#apexchart-8"),
+                _objectSpread(_objectSpread({},
+                    themeOptions[themeVariantDefault]), {}, {
+                    series: [
+                        data.passAmount,
+                        data.failAmount
+                    ],
+                    chart: {
+                        width: 380,
+                        type: "pie",
+                        background: "transparent"
+                    },
+                    stroke: {
+                        colors: ["transparent"]
+                    },
+                    labels: [
+                        "עברות את המבחן",
+                        "נכשלו במבחן"
+                    ],
+                    tooltip: {
+                        fillSeriesColor: false
+                    },
+                    responsive: [{
+                        breakpoint: 480,
+                        options: {
+                            chart: {
+                                width: 200
+                            },
+                            legend: {
+                                position: "bottom"
+                            }
+                        }
+                    }]
+                }));
+            chart8.render();
+            chart8.updateOptions(themeOptions[themeVariant]);
+
+        }
+
     })
 });
