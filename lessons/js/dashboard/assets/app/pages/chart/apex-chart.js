@@ -539,6 +539,9 @@ $(function() {
                 }
             }]
         }));
+    chart8.render();
+    chart8.updateOptions(themeOptions[themeVariant]);
+
     var chart9 = new ApexCharts(document.querySelector("#apexchart-9"), _objectSpread(_objectSpread({}, themeOptions[themeVariantDefault]), {}, {
         series: [{
             name: "SAMPLE A",
@@ -703,7 +706,6 @@ $(function() {
     chart5.render();
     chart6.render();
     chart7.render();
-    chart8.render();
     chart9.render();
     chart10.render();
     $("#theme-toggle").on("click", function() {
@@ -728,7 +730,6 @@ $(function() {
         }));
         chart6.updateOptions(themeOptions[themeVariant]);
         chart7.updateOptions(themeOptions[themeVariant]);
-        chart8.updateOptions(themeOptions[themeVariant]);
         chart9.updateOptions(_objectSpread(_objectSpread({}, themeOptions[themeVariant]), {}, {
             markers: {
                 strokeColors: isDark ? colors.black : colors.white

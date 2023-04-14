@@ -12,6 +12,46 @@ async function fetchDataFromApi() {
 
 }
 
+function loadPieChart(data) {
+    var chart8 = new ApexCharts(document.querySelector("#apexchart-8"),
+        _objectSpread(_objectSpread({},
+            themeOptions[themeVariantDefault]), {}, {
+            series: [
+                data.passAmount,
+                data.failAmount
+            ],
+            chart: {
+                width: 380,
+                type: "pie",
+                background: "transparent"
+            },
+            stroke: {
+                colors: ["transparent"]
+            },
+            labels: [
+                "עברות את המבחן",
+                "נכשלו במבחן"
+            ],
+            tooltip: {
+                fillSeriesColor: false
+            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: "bottom"
+                    }
+                }
+            }]
+        }));
+    chart8.render();
+    chart8.updateOptions(themeOptions[themeVariant]);
+
+}
+
 function getDataFromJson(json) {
     data = json.data;
     // All this variables have to be global:
