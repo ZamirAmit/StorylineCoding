@@ -50,9 +50,11 @@ function getDataFromJson(json) {
     return dashboardObject;
 }
 async function init() {
+
     let json = await fetchDataFromApi();
-    data = json.data;
-    console.log(data);
+    sumData = getDataFromJson(json);
+    console.log(sumData);
+
     google.charts.load('current', {
         'packages': ['corechart']
     });
