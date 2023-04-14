@@ -54,8 +54,8 @@ function getDataFromJson(json) {
     delete dashboardObject.frequency;
     dashboardObject.studentsAmount = data.length;
     // Average  = sum of group / amount of group.
-    averageGrade = Math.round(dashboardObject.totalGrades / studentsAmount);
-    averageTime = dashboardObject.totalTime / studentsAmount;
+    averageGrade = Math.round(dashboardObject.totalGrades / dashboardObject.studentsAmount);
+    averageTime = dashboardObject.totalTime / dashboardObject.studentsAmount;
     // Converting from mili-seconds to seconds:
     averageTimeInSeconds = averageTime / 1000;
     // Converting from seconds to minutes:
