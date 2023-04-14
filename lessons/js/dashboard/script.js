@@ -2,6 +2,7 @@ url = "data/grades-data.json";
 
 async function fetchDataFromApi() {
     const res = await fetch(url);
+    console.log(res);
     const json = await res.json();
     return json.joke;
 }
