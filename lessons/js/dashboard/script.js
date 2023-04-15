@@ -57,6 +57,7 @@ function getDataFromJson(json) {
     }
     dataBar = Object.values(data).map(student => ['', student.StudentGrade]);
     dashboardObject.dataLine = dataLine;
+    dashboardObject.dataBar = dataBar;
     delete dashboardObject.frequency;
     dashboardObject.studentsAmount = data.length;
     // Average  = sum of group / amount of group.
@@ -91,6 +92,8 @@ async function init() {
     google.charts.load('current', {
         'packages': ['corechart']
     });
+    let dataBar = sumData.dataBar;
+
     google.charts.setOnLoadCallback(function() {
         drawPieChart(dataPie);
         drawLinChart(dataLine);
