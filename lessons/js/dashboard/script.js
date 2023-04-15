@@ -106,7 +106,7 @@ async function init() {
     google.charts.setOnLoadCallback(function() {
         drawPieChart(dataPie);
         drawLinChart(dataLine);
-        drawBarChart(dataCombo);
+        drawComboChart(dataCombo);
     });
 }
 init();
