@@ -43,5 +43,5 @@ function drawBarChart(dataBar) {
 
     var chart = new google.visualization.ColumnChart(document.getElementById('bar_chart'));
     // Convert the Classic options to Material options.
-    chart.draw(data, google.charts.ColumnChart(options));
+    chart.draw(data, options);
 };
