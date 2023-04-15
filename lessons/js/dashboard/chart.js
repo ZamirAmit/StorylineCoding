@@ -30,3 +30,20 @@ function drawLinChart(dataLine) {
     let chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
     chart.draw(data, options);
 }
+
+
+
+function drawBarChart(dataBar) {
+    var data = new google.visualization.arrayToDataTable(dataBar);
+
+    var options = {
+        width: 800,
+        legend: { position: 'none' },
+
+        bar: { groupWidth: "90%" }
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+    // Convert the Classic options to Material options.
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+};

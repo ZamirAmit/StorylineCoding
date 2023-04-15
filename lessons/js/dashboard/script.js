@@ -21,7 +21,8 @@ function getDataFromJson(json) {
         totalTime: 0,
         passAmount: 0,
         failAmount: 0,
-        frequency: {}
+        frequency: {},
+        gradse: []
 
     }
     for (_line of data) {
@@ -31,9 +32,10 @@ function getDataFromJson(json) {
         if (dashboardObject.frequency[_line.StudentGrade]) {
             //console.log(_line.StudentGrade);
             dashboardObject.frequency[_line.StudentGrade] += 1;
-
+            dashboardObject.gradse.push(_line.StudentGrade);
         } else {
             dashboardObject.frequency[_line.StudentGrade] = 1;
+            dashboardObject.gradse.push(_line.StudentGrade);
 
         }
         // Check if score has Pass status:
@@ -43,13 +45,17 @@ function getDataFromJson(json) {
             dashboardObject.failAmount++; // Add to fail
         }
     }
-    dataLine = [
+    let dataLine = [
         ['Amount', 'Grade']
+    ];
+    let dataBar = [
+        ['Student', 'Grade']
     ];
     for (key of Object.keys(dashboardObject.frequency)) {
         dataLine.push([parseInt(key), dashboardObject.frequency[key]]);
 
     }
+    dataBar = Object.values(data).map(student => ['', student.StudentGrade]);
     dashboardObject.dataLine = dataLine;
     delete dashboardObject.frequency;
     dashboardObject.studentsAmount = data.length;
@@ -88,6 +94,7 @@ async function init() {
     google.charts.setOnLoadCallback(function() {
         drawPieChart(dataPie);
         drawLinChart(dataLine);
+        drawBarChart(dataBar);
     });
 }
 init();
