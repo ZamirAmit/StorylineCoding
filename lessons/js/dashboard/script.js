@@ -55,10 +55,11 @@ function getDataFromJson(json) {
         dataLine.push([parseInt(key), dashboardObject.frequency[key]]);
 
     }
-    dataBar = Object.values(data).map(student => ['', student.StudentGrade]);
+    dataBar.push(Object.values(data).map(student => ['', student.StudentGrade]));
     dashboardObject.dataLine = dataLine;
     dashboardObject.dataBar = dataBar;
     delete dashboardObject.frequency;
+    delete dashboardObject.gradse;
     dashboardObject.studentsAmount = data.length;
     // Average  = sum of group / amount of group.
     averageGrade = Math.round(dashboardObject.totalGrades / dashboardObject.studentsAmount);
