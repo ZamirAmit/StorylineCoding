@@ -39,7 +39,7 @@ function drawComboChart(dataCombo) {
     var options = {
         legend: { position: 'none' },
         bar: { groupWidth: "90%" },
-        series: { 1: { type: 'line' } }
+        series: { 2: { type: 'line' } }
     };
 
     var chart = new google.visualization.ComboChart(document.getElementById('bar_chart'));
