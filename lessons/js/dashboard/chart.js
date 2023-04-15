@@ -43,7 +43,7 @@ function drawBarChart(dataBar) {
         bar: { groupWidth: "90%" }
     };
 
-    var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+    var chart = new google.visualization.arrayToDataTable(document.getElementById('bar_chart'));
     // Convert the Classic options to Material options.
     chart.draw(data, google.charts.Bar.convertOptions(options));
 };
