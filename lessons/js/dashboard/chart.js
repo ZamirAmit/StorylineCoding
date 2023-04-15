@@ -39,6 +39,7 @@ function drawComboChart(dataCombo) {
     var options = {
         legend: { position: 'none' },
         bar: { groupWidth: "90%" },
+        seriesType: 'bars',
         series: { 2: { type: 'line' } }
     };
 
