@@ -37,9 +37,7 @@ function drawBarChart(dataBar) {
     var data = new google.visualization.arrayToDataTable(dataBar);
 
     var options = {
-        width: 800,
         legend: { position: 'none' },
-
         bar: { groupWidth: "90%" }
     };
 
