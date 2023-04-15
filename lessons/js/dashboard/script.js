@@ -45,6 +45,7 @@ function getDataFromJson(json) {
             dashboardObject.failAmount++; // Add to fail
         }
     }
+    dashboardObject.studentsAmount = data.length;
     // Average  = sum of group / amount of group.
     dashboardObject.averageGrade = Math.round(dashboardObject.totalGrades / dashboardObject.studentsAmount);
     averageTime = dashboardObject.totalTime / dashboardObject.studentsAmount;
@@ -75,7 +76,7 @@ function getDataFromJson(json) {
     dashboardObject.dataCombo = dataCombo;
     delete dashboardObject.frequency;
     delete dashboardObject.gradse;
-    dashboardObject.studentsAmount = data.length;
+
 
     return dashboardObject;
 }
