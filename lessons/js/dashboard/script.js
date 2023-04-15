@@ -87,15 +87,18 @@ async function init() {
     document.querySelector("#pass-tudents-value").innerHTML = sumData.passAmount;
     document.querySelector("#fail-tudents-value").innerHTML = sumData.failAmount;
     document.querySelector("#average-time-value").innerHTML = sumData.formatedAverageTime;
+
     let dataPie = [
         ['Task', 'Hours per Day'],
         ['עברו את המבחן', sumData.passAmount],
         ['נכשלו במבחן', sumData.failAmount]
     ];
+
     let dataLine = sumData.dataLine;
     google.charts.load('current', {
         'packages': ['corechart']
     });
+
     let dataBar = sumData.dataBar;
 
     google.charts.setOnLoadCallback(function() {
@@ -105,3 +108,7 @@ async function init() {
     });
 }
 init();
+
+window.addEventListener("resize", function() {
+    init();
+});
