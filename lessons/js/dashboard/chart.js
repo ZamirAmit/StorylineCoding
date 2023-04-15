@@ -33,15 +33,16 @@ function drawLinChart(dataLine) {
 
 
 
-function drawBarChart(dataBar) {
-    var data = new google.visualization.arrayToDataTable(dataBar);
+function drawComboChart(dataCombo) {
+    var data = new google.visualization.arrayToDataTable(dataCombo);
 
     var options = {
         legend: { position: 'none' },
-        bar: { groupWidth: "90%" }
+        bar: { groupWidth: "90%" },
+        series: { 1: { type: 'line' } }
     };
 
-    var chart = new google.visualization.ColumnChart(document.getElementById('bar_chart'));
+    var chart = new google.visualization.ComboChart(document.getElementById('bar_chart'));
     // Convert the Classic options to Material options.
     chart.draw(data, options);
 };

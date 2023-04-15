@@ -52,15 +52,15 @@ function getDataFromJson(json) {
         dataLine.push([parseInt(key), dashboardObject.frequency[key]]);
 
     }
-    let dataBarHeader = [
-        ['Student', 'Grade']
+    let dataComboHeader = [
+        ['Student', 'Grade', 'Average']
     ];
 
-    let datBarValues = Object.values(data).map(student => ['', student.StudentGrade]);
-    let dataBar = dataBarHeader.concat(datBarValues);
+    let datBarValues = Object.values(data).map(student => ['', student.StudentGrade, totalGrades / data.length]);
+    let dataCombo = dataComboHeader.concat(datBarValues);
 
     dashboardObject.dataLine = dataLine;
-    dashboardObject.dataBar = dataBar;
+    dashboardObject.dataCombo = dataCombo;
     delete dashboardObject.frequency;
     delete dashboardObject.gradse;
     dashboardObject.studentsAmount = data.length;
@@ -99,12 +99,12 @@ async function init() {
         'packages': ['corechart']
     });
 
-    let dataBar = sumData.dataBar;
+    let dataCombo = sumData.dataCombo;
 
     google.charts.setOnLoadCallback(function() {
         drawPieChart(dataPie);
         drawLinChart(dataLine);
-        drawBarChart(dataBar);
+        drawBarChart(dataCombo);
     });
 }
 init();
