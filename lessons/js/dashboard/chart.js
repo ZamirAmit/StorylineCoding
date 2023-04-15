@@ -40,7 +40,7 @@ function drawComboChart(dataCombo) {
         legend: { position: 'none' },
         bar: { groupWidth: "90%" },
         seriesType: 'bars',
-        series: { 2: { type: 'line' } }
+        series: { 1: { type: 'line' } }
     };
 
     var chart = new google.visualization.ComboChart(document.getElementById('bar_chart'));
