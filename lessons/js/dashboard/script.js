@@ -48,15 +48,17 @@ function getDataFromJson(json) {
     let dataLine = [
         ['Amount', 'Grade']
     ];
-    let dataBar = [
-        ['Student', 'Grade']
-    ];
     for (key of Object.keys(dashboardObject.frequency)) {
         dataLine.push([parseInt(key), dashboardObject.frequency[key]]);
 
     }
+    let dataBarHeader = [
+        ['Student', 'Grade']
+    ];
+
     let datBarValues = Object.values(data).map(student => ['', student.StudentGrade]);
-    dataBar.concat(datBarValues);
+    let dataBar = dataBarHeader.concat(datBarValues);
+
     dashboardObject.dataLine = dataLine;
     dashboardObject.dataBar = dataBar;
     delete dashboardObject.frequency;
