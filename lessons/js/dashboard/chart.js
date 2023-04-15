@@ -22,7 +22,9 @@ function drawLinChart(dataLine) {
 
     let options = {
         curveType: 'function',
-        legend: { position: 'none' }
+        legend: {
+            position: 'none'
+        }
     };
 
     let chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
