@@ -45,6 +45,18 @@ function getDataFromJson(json) {
             dashboardObject.failAmount++; // Add to fail
         }
     }
+    // Average  = sum of group / amount of group.
+    dashboardObject.averageGrade = Math.round(dashboardObject.totalGrades / dashboardObject.studentsAmount);
+    averageTime = dashboardObject.totalTime / dashboardObject.studentsAmount;
+    // Converting from mili-seconds to seconds:
+    averageTimeInSeconds = averageTime / 1000;
+    // Converting from seconds to minutes:
+    averageTimeInMinutes = Math.floor(averageTimeInSeconds / 60);
+    // Caculating remainig seconds after subtracting total from seconds:
+    remainAverageSecond = Math.round(averageTimeInSeconds - averageTimeInMinutes * 60);
+    // Formatting the time to readable version:
+    dashboardObject.formatedAverageTime = averageTimeInMinutes + ":" + remainAverageSecond;
+
     let dataLine = [
         ['Amount', 'Grade']
     ];
@@ -56,7 +68,7 @@ function getDataFromJson(json) {
         ['Student', 'Grade', 'Average']
     ];
 
-    let datBarValues = Object.values(data).map(student => ['', student.StudentGrade, totalGrades / data.length]);
+    let datBarValues = Object.values(data).map(student => ['', student.StudentGrade, dashboardObject.averageGrade]);
     let dataCombo = dataComboHeader.concat(datBarValues);
 
     dashboardObject.dataLine = dataLine;
@@ -64,17 +76,7 @@ function getDataFromJson(json) {
     delete dashboardObject.frequency;
     delete dashboardObject.gradse;
     dashboardObject.studentsAmount = data.length;
-    // Average  = sum of group / amount of group.
-    averageGrade = Math.round(dashboardObject.totalGrades / dashboardObject.studentsAmount);
-    averageTime = dashboardObject.totalTime / dashboardObject.studentsAmount;
-    // Converting from mili-seconds to seconds:
-    averageTimeInSeconds = averageTime / 1000;
-    // Converting from seconds to minutes:
-    averageTimeInMinutes = Math.floor(averageTimeInSeconds / 60);
-    // Caculating remainig seconds after subtracting total from seconds:
-    remainAverageSecond = Math.round(averageTimeInSeconds - averageTimeInMinutes * 60);
-    // Formatting the time to readable version:
-    dashboardObject.formatedAverageTime = averageTimeInMinutes + ":" + remainAverageSecond;
+
     return dashboardObject;
 }
 async function init() {
