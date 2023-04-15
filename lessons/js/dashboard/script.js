@@ -55,7 +55,8 @@ function getDataFromJson(json) {
         dataLine.push([parseInt(key), dashboardObject.frequency[key]]);
 
     }
-    dataBar.push(Object.values(data).map(student => ['', student.StudentGrade]));
+    let datBarValues = Object.values(data).map(student => ['', student.StudentGrade]);
+    dataBar.concat(datBarValues);
     dashboardObject.dataLine = dataLine;
     dashboardObject.dataBar = dataBar;
     delete dashboardObject.frequency;
